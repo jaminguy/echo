@@ -13,6 +13,6 @@ get '/user_agent' do
   request.user_agent
 end
 
-get 'ip' do
+get '/ip' do
   request.ip
 end
