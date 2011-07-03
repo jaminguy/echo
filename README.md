@@ -1,8 +1,8 @@
-## Example
+# Example
 
 An example of this service is running at http://httpecho.heroku.com
 
-## License
+# License
 
 Copyright (c) 2011 Jamin Guy
 
