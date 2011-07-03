@@ -3,10 +3,10 @@
 An example of this service is running at http://httpecho.heroku.com
 
 ## Valid calls
-	http://httpecho.heroku.com/headers (same as example above)
-	http://httpecho.heroku.com/headers.json
-	http://httpecho.heroku.com/user_agent
-	http://httpecho.heroku.com/ip
+	/headers (same as example above)
+	/headers.json
+	/user_agent
+	/ip
 
 # License
 
