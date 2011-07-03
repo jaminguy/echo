@@ -2,6 +2,12 @@
 
 An example of this service is running at http://httpecho.heroku.com
 
+## Valid calls
+	/headers (same as example above)
+	/headers.json
+	/user_agent
+	/ip
+
 # License
 
 Copyright (c) 2011 Jamin Guy
