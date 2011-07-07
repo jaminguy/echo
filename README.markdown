@@ -3,7 +3,8 @@
 An example of this service is running at http://httpecho.heroku.com
 
 ## Valid calls
-	/headers (same as example above)
+	/
+	/headers (same as /)
 	/headers.json
 	/user_agent
 	/ip
