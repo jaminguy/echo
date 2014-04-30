@@ -21,12 +21,15 @@ get '/headers' do
 end
 
 get '/headers.json' do
-  json = request.env.select {|k,v| k.match("^.*")}.to_json
+  json = request.env.to_h.select {|k,v| k.match("^.*")}.to_json
   "#{json}"
 end
 
 get '/json' do
-  json = request.env.select {|k,v| k.match("^.*")}.to_json
+  json = ""
+  request.env.keys.sort.each do |key|
+
+  end
   "#{json}"
 end
 
