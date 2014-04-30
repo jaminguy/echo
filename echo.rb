@@ -6,7 +6,7 @@ helpers do
 
     def json_forHeaders()
       json_hash = Hash.new
-      request.env.keys.sort.each do |key|
+      request.env.select {|k,v| k.start_with? 'HTTP_'}.each do |key|
         json_hash[key] = request.env[key]
       end
       json_hash.to_json
