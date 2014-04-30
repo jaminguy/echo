@@ -1,5 +1,5 @@
 # httpecho
-This service returns
+This service returns the values of all http headers and other Rack middleware request env values.
 
 ## Example
 
