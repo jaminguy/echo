@@ -25,6 +25,11 @@ get '/headers.json' do
   "#{json}"
 end
 
+get '/json' do
+  json = request.env.select {|k,v| k.match("^.*")}.to_json
+  "#{json}"
+end
+
 get '/user_agent' do
   request.user_agent
 end
