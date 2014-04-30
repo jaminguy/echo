@@ -1,17 +1,19 @@
-# Example
+# httpecho
+This service returns
 
-An example of this service is running at http://httpecho.heroku.com
+## Example
+
+An example of this service is running at http://httpecho.herokuapp.com
 
 ## Valid calls
 	/
-	/headers (same as /)
-	/headers.json
+	/json
 	/user_agent
 	/ip
 
 # License
 
-Copyright (c) 2011 Jamin Guy
+Copyright (c) 2014 Jamin Guy
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

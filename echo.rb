@@ -22,14 +22,6 @@ get '/' do
   html()
 end
 
-get '/headers' do
-   html_for_headers()
-end
-
-get '/headers.json' do
-  json_forHeaders()
-end
-
 get '/json' do
   json_forHeaders()
 end
