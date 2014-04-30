@@ -3,17 +3,23 @@ require 'sinatra'
 require 'json'
 
 helpers do
-    def html_for_headers()
-      output = "<table border-spacing='0' border-width='1' border-style='solid'>"
-      request.env.select {|k,v| k.match("^.*")}.each do |header|
-        output += "<tr><td align='right'>#{header[0]}:</td><td>#{header[1]}</td></tr>"
+
+    def json_forHeaders()
+      json_hash = Hash.new
+      request.env.keys.sort.each do |key|
+        json_hash[key] = request.env[key]
       end
-      output += "</table>"
+      json_hash.to_json
+    end
+
+    def html()
+      json = json_forHeaders()
+      erb :index, :locals => {:json => json}
     end
 end
 
 get '/' do
-  html_for_headers()
+  html()
 end
 
 get '/headers' do
@@ -21,16 +27,11 @@ get '/headers' do
 end
 
 get '/headers.json' do
-  json = request.env.to_h.select {|k,v| k.match("^.*")}.to_json
-  "#{json}"
+  json_forHeaders()
 end
 
 get '/json' do
-  json = ""
-  request.env.keys.sort.each do |key|
-
-  end
-  "#{json}"
+  json_forHeaders()
 end
 
 get '/user_agent' do

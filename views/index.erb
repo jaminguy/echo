@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>httpecho</title>
+  <meta name="description" content="">
+  <meta name="author" content="Jamin Guy">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+  <script src="json_to_html.js" ></script>
+
+  <script type="text/javascript">
+  var json = <%= json %>;
+  function load() {
+    json_markup = syntaxHighlight(json)
+    document.body.appendChild(document.createElement('pre')).innerHTML = json_markup;
+  }
+  </script>
+</head>
+
+<body onload="load()">
+</body>
+</html>
